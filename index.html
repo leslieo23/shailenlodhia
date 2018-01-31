@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="eng">
+<head>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Muli:200" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+
+<div class="container">
+
+<br>
+<br>
+<br>
+<nav id="scroll" class="navbar ">
+
+<ul class=" nav topnav" id="myTopnav">
+  <li class="nav-item">
+  <a href="#title" class="home">Home</a>
+  </li>
+  <li class="nav-item">
+  <a href="#aboutMe" class="aboutMe">About Me</a>
+  </li>
+  <li class="nav-item">
+  <a href="#expreseo_logo" class="expreseo">Expreseo</a>
+  </li>
+  <li class="nav-item">
+  <a href="#connect_with_me" class="contact">Contact Me</a>
+  </li>
+ </ul>
+
+ </nav>
+ <div data-spy="scroll" data-target="#scroll" data-offset="0">
+<div class="jumbotron">
+<img src="man_profile2.png" class="img-fluid " id="profile_man" align="right">
+<blockquote id="title">
+	<img src="Namex.png" class="img-fluid" width="250px" height="250px" align=" middle" id="nameTitle">
+
+</blockquote>
+
+</div>
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="aboutMe" id="aboutMe">
+<img src="aboutme_logo.png" class="aboutMeTitle img-fluid" align="middle">
+<p class="aboutMe2" >
+	I am Google SEO Expert Shailen Lodhia,  I was born in Fiji Islands and grew up in Los Angeles, California. I graduated with a degree in Business Marketing from Chico State in Northern California. During my final year in college, I was the president of Lambda Chi Alpha fraternity and also the recipient of College Entrepreneur of the Year for running and managing a very successful DJ Company.
+</p>
+
+<img src="seo_logo_2.png" class="img-fluid seo_logo" align="middle">
+
+<p class="aboutMe1">
+	I started my career in Search Engine Optimization (SEO) in February 2005 as a Vice President of Sales & Marketing working for a high profile Search Engine Marketing Company in Los Angeles. I have been quoted in several Search Engine Marketing related articles including New York Times. </p>
+<br>
+<br>
+<p class="aboutMe1">In addition to technical knowledge on SEO, I am certified in Search related conferences such as Search Marketing Expo (SMX). These certifications & conferences are important because they help an SEO Expert in Google better understand the mechanics of Google Search and keep up with the constantly changing dynamics by interacting with other Digital Marketing experts.</p>
+<br>
+<br>
+<p class="aboutMe1">It is very critical that an SEO Expert is not only a technical expert but also someone who can easily adapt to the dynamic world of SEO, SEM, ORM, and Social Marketing to help you achieve the best possible rankings for your keywords. I can use my experience and expertise in SEO and website development to help you achieve the rankings that you are looking for. For example, I helped my prior SEO Company achieve top rankings for the keyword term “Search Engine Optimization”, which happens to be one of the most competitive keywords; I can do the same for you.</p>
+<p class="aboutMe1">
+If your goal is to get your website ranked on top of Google, Yahoo, and Bing from Microsoft, then email SEO Expert @ ShailenLodhia.com and I will get back to you with more information. </p>
+</p>
+<br>
+<br>
+
+<img src="Expreseo_Logo.png" align="middle" class="img-fluid expreseo_logo" id="expreseo_logo" >
+
+<p  class="aboutMe1">EXPRESEO is based out of Hillsborough in Central New Jersey has over a decade of experience in the NJ Digital Marketing Industry. Our expertise spans in all areas of Web Design and Online Marketing including SEO, SEM, Paid Search (PPC), Social Marketing, Conversion (CRO), Online Reputation Management (ORM), Premium Website & Logo Design. Our services are a la carte and, thus, we can work with each client’s individual needs rather than applying a set template to the project. Each project is personalized to our client’s specifications and needs, making it unique and one-of-a-kind. Contact us today for a free one hour consultation with our Google SEO Experts.</p>
+<br>
+<br>
+<div class="socialMedia" align="middle">
+<img src="connect_with_me.png" class="img-fluid" id="connect_with_me" class="connect_with_me">
+<br>
+<br>
+<a href="https://www.facebook.com/EXPRESE0/?ref=br_rs" target="_blank" class="facebook"><img src="FacebookIcon.png" class=" img-fluid facebook"></a>
+
+<a href="https://www.instagram.com/expreseo" target="_blank" class="instagram"><img src="InstagramIcon.png" class="instagram img-fluid"></a>
+
+<a href="https://www.twitter.com/expreseo" target="_blank" class="twitter img-fluid"><img src="TwitterIcon.png" class="twitter"></a>
+
+<a href="https://www.linkedin.com/in/shailenlodhia" target="_blank" class="linkedin"><img src="LinkedinIcon.png" class=" img-fluid linkedin"></a>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+</div>
+</div>
+
+<script type="text/javascript">
+	window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; }// For Chrome, Firefox, IE and Opera
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>
