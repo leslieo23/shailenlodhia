@@ -28,7 +28,7 @@ body{
   width:100%;
   height:80%;
  height:calc(60% - 1px);
-  background-image:url('SLcover.jpg');
+  background-image:url('ShailenLogo@3x.png');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -45,10 +45,21 @@ body{
 	align:middle;
 }
 .expreseo{
-  width:100%;
+  height:100%;
   /*height:10%;*/
   height:calc(60% - 1px);
-  background-image:url('background1.jpg');
+  background-image:url('ExpreseoLogo@3x.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.SEO{
+    width:100%;
+  /*height:10%;*/
+  height:calc(60% - 1px);
+  background-image:url('seo_image.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
