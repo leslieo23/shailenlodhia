@@ -29,7 +29,7 @@ body{
   height:80%;
  height:calc(60% - 1px);
   background-image:url('ShailenLogo@3x.png');
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,7 +49,7 @@ body{
   /*height:10%;*/
   height:calc(60% - 1px);
   background-image:url('ExpreseoLogo@3x.png');
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
@@ -60,10 +60,12 @@ body{
   /*height:10%;*/
   height:calc(60% - 1px);
   background-image:url('seo_image.jpg');
-  background-attachment: fixed;
+ background-repeat: no-repeat;
+ background-size: cover;
+ /* background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; 
+  
+  */
 }
 .expreseo_logo{
 
