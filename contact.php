@@ -23,8 +23,8 @@ $subject = 'New message from contact form';
 
 // smtp credentials and server
 
-$smtpHost = 'smtp.shailenlodhia.com';
-$smtpUsername = 'leslieobour@outlook.com';
+$smtpHost = 'smtp.gmail.com';
+$smtpUsername = 'leslie.obour23@gmail.com';
 $smtpPassword = '23Centshow';
 
 // form field names and their translations.
@@ -87,7 +87,7 @@ try
     // use
     // $mail->Host = gethostbyname('smtp.gmail.com');
     // if your network does not support SMTP over IPv6
-    $mail->Host = gethostbyname($smtp.shailenlodhia.com);
+    $mail->Host = gethostbyname($smtp.gmail.com);
     
     //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
     $mail->Port = 587;
@@ -99,10 +99,10 @@ try
     $mail->SMTPAuth = true;
     
     //Username to use for SMTP authentication - use full email address for gmail
-    $mail->Username = $smtpHost;
+    $mail->'leslie.obour23@gmail.com' = $smtpHost;
     
     //Password to use for SMTP authentication
-    $mail->Password = $smtpPassword;
+    $mail->'23Centshow'= $smtpPassword;
     
     
     if(!$mail->send()) {
