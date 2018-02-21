@@ -1,132 +1,89 @@
+
 <?php
-/*
-THIS FILE USES PHPMAILER INSTEAD OF THE PHP MAIL() FUNCTION
-AND ALSO SMTP TO SEND THE EMAILS
-*/
-
-require 'PHPMailer-master/PHPMailerAutoload.php';
-
-/*
-*  CONFIGURE EVERYTHING HERE
-*/
-
-// an email address that will be in the From field of the email.
-$fromEmail = 'demo@domain.com';
-$fromName = 'Demo contact form';
-
-// an email address that will receive the email with the output of the form
-$sendToEmail = 'demo@domain.com';
-$sendToName = 'Demo contact form';
-
-// subject of the email
-$subject = 'New message from contact form';
-
-// smtp credentials and server
-
-$smtpHost = 'smtp.gmail.com';
-$smtpUsername = 'leslie.obour23@gmail.com';
-$smtpPassword = 'Lobour3221';
-
-// form field names and their translations.
-// array variable name => Text to appear in the email
-$fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message');
-
-// message that will be displayed when everything is OK :)
-$okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
-
-// If something goes wrong, we will display this message.
-$errorMessage = 'There was an error while submitting the form. Please try again later';
-
-/*
-*  LET'S DO THE SENDING
-*/
-
-// if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
-error_reporting(E_ALL & ~E_NOTICE);
-
-try
-{
-    
-    if(count($_POST) == 0) throw new \Exception('Form is empty');
-    
-    $emailTextHtml = "<h1>You have a new message from your contact form</h1><hr>";
-    $emailTextHtml .= "<table>";
-    
-    foreach ($_POST as $key => $value) {
-        // If the field exists in the $fields array, include it in the email
-        if (isset($fields[$key])) {
-            $emailTextHtml .= "<tr><th>$fields[$key]</th><td>$value</td></tr>";
-        }
+if(isset($_POST['email'])) {
+ 
+    // EDIT THE 2 LINES BELOW AS REQUIRED
+    $email_to = "leslie.obour23@gmail.com";
+    $email_subject = "Message From Shailenlodhia.com";
+ 
+    function died($error) {
+        // your error code can go here
+        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+        echo "These errors appear below.<br /><br />";
+        echo $error."<br /><br />";
+        echo "Please go back and fix these errors.<br /><br />";
+        die();
     }
-    $emailTextHtml .= "</table><hr>";
-    $emailTextHtml .= "<p>Have a nice day,<br>Best,<br>Ondrej</p>";
-    
-    $mail = new PHPMailer;
-    
-    $mail->setFrom($fromEmail, $fromName);
-    $mail->addAddress($sendToEmail, $sendToName); // you can add more addresses by simply adding another line with $mail->addAddress();
-    $mail->addReplyTo($from);
-    
-    $mail->isHTML(true);
-    
-    $mail->Subject = $subject;
-    $mail->Body    = $emailTextHtml;
-    $mail->msgHTML($emailTextHtml); // this will also create a plain-text version of the HTML email, very handy
-    
-    
-    $mail->isSMTP();
-    
-    //Enable SMTP debugging
-    // 0 = off (for production use)
-    // 1 = client messages
-    // 2 = client and server messages
-    $mail->SMTPDebug = 0;
-    $mail->Debugoutput = 'html';
-    
-    //Set the hostname of the mail server
-    // use
-    // $mail->Host = gethostbyname('smtp.gmail.com');
-    // if your network does not support SMTP over IPv6
-    $mail->Host = gethostbyname($smtpHost);
-    
-    //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
-    $mail->Port = 587;
-    
-    //Set the encryption system to use - ssl (deprecated) or tls
-    $mail->SMTPSecure = 'tls';
-    
-    //Whether to use SMTP authentication
-    $mail->SMTPAuth = true;
-    
-    //Username to use for SMTP authentication - use full email address for gmail
-    $mail->Username = $smtpHost;
-    
-    //Password to use for SMTP authentication
-    $mail->Password = $smtpPassword;
-    
-    
-    if(!$mail->send()) {
-        throw new \Exception('I could not send the email.' . $mail->ErrorInfo);
+ 
+ 
+    // validation expected data exists
+    if(!isset($_POST['Name']) ||
+       
+        !isset($_POST['Email']) ||
+        !isset($_POST['Phone']) ||
+        !isset($_POST['Message'])) {
+        died('We are sorry, but there appears to be a problem with the form you submitted.');       
     }
-    
-    $responseArray = array('type' => 'success', 'message' => $okMessage);
-}
-catch (\Exception $e)
-{
-    // $responseArray = array('type' => 'danger', 'message' => $errorMessage);
-    $responseArray = array('type' => 'danger', 'message' => $e->getMessage());
-}
+ 
+     
+ 
+    $first_name = $_POST['Name']; // required
 
+    $email_from = $_POST['Email']; // required
+    $telephone = $_POST['Phone']; // not required
+    $comments = $_POST['Message']; // required
+ 
+    $error_message = "";
+    $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+ 
+  if(!preg_match($email_exp,$email_from)) {
+    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+  }
+ 
+    $string_exp = "/^[A-Za-z .'-]+$/";
+ 
+  if(!preg_match($string_exp,$Name)) {
+    $error_message .= 'The First Name you entered does not appear to be valid.<br />';
+  }
+ 
 
-// if requested by AJAX request return JSON response
-if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-    $encoded = json_encode($responseArray);
-    
-    header('Content-Type: application/json');
-    
-    echo $encoded;
+ 
+  if(strlen($Message) < 2) {
+    $error_message .= 'The Comments you entered do not appear to be valid.<br />';
+  }
+ 
+  if(strlen($error_message) > 0) {
+    died($error_message);
+  }
+ 
+    $email_message = "Form details below.\n\n";
+ 
+     
+    function clean_string($string) {
+      $bad = array("content-type","bcc:","to:","cc:","href");
+      return str_replace($bad,"",$string);
+    }
+ 
+     
+ 
+    $email_message .= "First Name: ".clean_string($Name)."\n";
+   
+    $email_message .= "Email: ".clean_string($email_from)."\n";
+    $email_message .= "Telephone: ".clean_string($Phone)."\n";
+    $email_message .= "Comments: ".clean_string($Message)."\n";
+ 
+// create email headers
+$headers = 'From: '.$email_from."\r\n".
+'Reply-To: '.$email_from."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+@mail($email_to, $email_subject, $email_message, $headers);  
+?>
+ 
+<!-- include your own success html here -->
+ 
+Thank you for contacting us. We will be in touch with you very soon.
+ 
+<?php
+ 
 }
-// else just display the message
-else {
-    echo $responseArray['message'];
-}
+?>

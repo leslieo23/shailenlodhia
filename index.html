@@ -158,80 +158,76 @@
 
 </div>
 
- <div class="container">
-
-            <div class="row">
-
-                <div class="col-lg-8 col-lg-offset-2">
-
-                    <h1>Contact form Tutorial from <a href="http://bootstrapious.com">Bootstrapious.com</a></h1>
-
-                    <p class="lead">This is a demo for our tutorial dedicated to crafting working Bootstrap contact form with PHP and AJAX background.</p>
-                    <p class="lead">This file uses PHPMailer to send the emails.</p>
 
 
-                    <form id="contact-form" method="post" action="contact.php" role="form">
 
-                        <div class="messages"></div>
 
-                        <div class="controls">
 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="form_name">Firstname *</label>
-                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="form_lastname">Lastname *</label>
-                                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="form_email">Email *</label>
-                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="form_phone">Phone</label>
-                                        <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="form_message">Message *</label>
-                                        <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <input type="submit" class="btn btn-success btn-send" value="Send message">
-                                </div>
-                            </div>
-                            
+
+<div class="row">
+  
+
+
+<div style="width:98%;max-width:500px;">
+        <form id="contactForm" class="form-horizontal" method="post" action="contact.php">
+            <fieldset class="col-sm-12">
+                <legend>Contact Form</legend>
+
+                <div class="form-group">
+                    <label for="Name" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-10">
+                        <div class="input-group">
+                        
+                            <input type="text" id="Name" name="Name" class="form-control" placeholder="* Enter Name">
                         </div>
+                    </div>
+                </div>
 
-                    </form>
+                <div class="form-group">
+                    <label for="Email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <div class="input-group">
+                            
+                            <input type="email" id="Email" name="Email" class="form-control" placeholder="* Enter Email">
+                        </div>
+                    </div>
+                </div>
 
-                </div><!-- /.8 -->
+                <div class="form-group">
+                    <label for="Phone" class="col-sm-2 control-label">Phone</label>
+                    <div class="col-sm-10">
+                        <div class="input-group">
+                           
+                            <input type="text" id="Phone" name="Phone" class="form-control" placeholder="Enter Phone Number">
+                        </div>
+                    </div>
+                </div>
 
-            </div> <!-- /.row-->
+                <div class="form-group">
+                    <label for="Message" class="col-sm-2 control-label">Message</label>
+                    <div class="col-sm-10">
+                        <div class="input-group">
+                      
+                            <textarea id="Message" name="Message" class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
 
-        </div> <!-- /.container-->
+                <div class="form-group">                    <div class="col-sm-2"></div>                    <div class="col-sm-10" align="center">                        <div class="g-recaptcha" data-sitekey="6LcjegkTAAAAADwX9hGs2hfyPPcXTWrgcY30_4Dl"></div>                    </div>                </div>
+                <div class="form-group">                  <div class="col-sm-2"></div>
+                    <div class="col-sm-10" align="center">
+                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+        <div id="status"></div>
+</div>
 
 
+
+</div>
 
 
 
