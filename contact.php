@@ -87,7 +87,7 @@ try
     // use
     // $mail->Host = gethostbyname('smtp.gmail.com');
     // if your network does not support SMTP over IPv6
-    $mail->Host = gethostbyname($smtpHost);
+    $mail->Host = gethostbyname($smtp.shailenlodhia.com);
     
     //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
     $mail->Port = 587;
