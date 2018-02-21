@@ -23,7 +23,7 @@ $subject = 'New message from contact form';
 
 // smtp credentials and server
 
-$smtpHost = 'smtp.domain.com';
+$smtpHost = 'smtp.shailenlodhia.com';
 $smtpUsername = 'leslieobour@outlook.com';
 $smtpPassword = '23Centshow';
 
