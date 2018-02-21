@@ -66,11 +66,11 @@ if(isset($_POST['email'])) {
  
      
  
-    $email_message .= "First Name: ".clean_string($Name)."\n";
+    $email_message .= "Name: ".clean_string($Name)."\n";
    
     $email_message .= "Email: ".clean_string($email_from)."\n";
     $email_message .= "Telephone: ".clean_string($Phone)."\n";
-    $email_message .= "Comments: ".clean_string($Message)."\n";
+    $email_message .= "Message: ".clean_string($Message)."\n";
  
 // create email headers
 $headers = 'From: '.$email_from."\r\n".
@@ -81,7 +81,7 @@ $headers = 'From: '.$email_from."\r\n".
  
 <!-- include your own success html here -->
  
-Thank you for contacting us. We will be in touch with you very soon.
+<h2>Thank you for contacting us. We will be in touch with you very soon.</h2>
  
 <?php
  
