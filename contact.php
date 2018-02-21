@@ -11,11 +11,11 @@ require 'PHPMailer-master/PHPMailerAutoload.php';
 */
 
 // an email address that will be in the From field of the email.
-$fromEmail = '';
+$fromEmail = 'leslieobour@outlook.com';
 $fromName = 'Demo contact form';
 
 // an email address that will receive the email with the output of the form
-$sendToEmail = '';
+$sendToEmail = 'leslieobour@outlook.com';
 $sendToName = 'Demo contact form';
 
 // subject of the email
@@ -24,8 +24,8 @@ $subject = 'New message from contact form';
 // smtp credentials and server
 
 $smtpHost = 'smtp.domain.com';
-$smtpUsername = 'hello@domain.com';
-$smtpPassword = 'PASSWORD';
+$smtpUsername = 'leslieobour@outlook.com';
+$smtpPassword = '23Centshow';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
