@@ -59,7 +59,7 @@ a:link{
 }
 
 .Seo1{
-  margin-top:-80px;
+  /*margin-top:-80px;*/
 }
 .expreseo{
   height:100%;
@@ -87,12 +87,12 @@ a:link{
   margin-top:10px;
   
 }
-.expreseo_logo{
+/*.expreseo_logo{
 
 	display:block;
 	margin:0 auto;
 
-}
+}*/
 .expreseo1{
   align:center;
   margin-top:60px;
