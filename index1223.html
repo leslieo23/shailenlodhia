@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+<nav class="navbar navbar-inverse sticky-top bg-inverse">
+
+</nav>
+ </div>
+                   <br/><br/>
+                  </div>
+                    
+                
+                <div class="home-intro" id="home-intro">
+					<div class="container">
+
+					
+												<div class="modal-body">
+											
+                            
+                            <div class="alert alert-danger captchaerror" id="contact_captchaError" style="display:none;">
+								<strong>Error!</strong> Incorrect Captcha code. Please enter the correct code.
+							</div>
+                            
+                             <div id="email-or-phone-info" class="info"></div>
+                            
+                            <div class="error-message"></div>
+                            
+                            <div id="mail-status2"></div>
+                
+                 
+								<div class="row">
+									<div class="form-group">
+										<div class="col-md-6">
+											<label>First Name</label>
+                                           <label class="input relative">
+							<label class="icon-append" for="name">
+								<i class="fa fa-user"></i>
+							</label>
+											<input type="text" value="" data-msg-required="Please enter your first name." maxlength="100" class="form-control" name="name" id="name" required>
+                                            </label>
+                                             <div id="name-info" class="info"></div>
+										</div>
+                                        <div class="col-md-6">
+											<label>Last Name</label>
+                                           <label class="input relative">
+							<label class="icon-append" for="lname">
+								<i class="fa fa-user"></i>
+							</label>
+											<input type="text" value="" data-msg-required="Please enter your last name." maxlength="100" class="form-control" name="lname" id="lname" required>
+                                            </label>
+                                             <div id="name-info2" class="info"></div>
+										</div>
+										
+									</div>
+								</div>
+                                
+                                <div class="row">
+								     <div class="col-md-12">
+											<label>Email</label>
+                                            <label class="input relative">
+							<label class="icon-append" for="email">
+								<i class="fa fa-envelope-o"></i>
+							</label>
+											<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
+                                            </label>
+                                             <div id="email-info3" class="info"></div>
+                                            <div id="email-info" class="info"></div>
+                                            
+										</div>
+									
+								</div>
+                                
+                                <div class="row">
+									<div class="form-group">
+										<div class="col-md-6">
+											<label>Phone</label>
+                                          <label class="input relative">
+						<label class="icon-append" for="phone">
+							<i class="fa fa-phone"></i>
+						</label>
+											<input type="text" value="" data-msg-required="Please enter phone number." maxlength="100" class="form-control" name="phone" id="phone" required>
+                                            </label>
+                                             <div id="phone-info" class="info"></div>
+										</div>
+										<div class="col-md-6">
+											<label>Website</label>
+                                           <label class="input relative">
+						<label class="icon-append" for="website">
+							<i class="fa fa-globe"></i>
+						</label>
+											<input type="text" value="" data-msg-required="Please enter your website."  maxlength="100" class="form-control" name="website" id="website">
+                                            </label>
+										</div>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="form-group">
+										<div class="col-md-12">
+											<label>Message</label>
+                                            <label class="textarea relative">
+						               <label class="icon-append" for="comments">
+							            <i class="fa fa-file-text-o"></i>
+						                 </label>
+											<textarea maxlength="5000" data-msg-required="Please enter your message." rows="3" class="form-control" name="comments" id="comments"></textarea>
+                                            </label>
+										</div>
+									</div>
+								</div>
+				   <div class="row mb-sm">
+                                   <div class="form-group">
+                                       <div class="col-md-5">
+                                  
+                                       </div>
+                                  
+                                       <div class="col-md-4">
+                                          <label>&nbsp;</label> 
+                                         <button style="display:inline-block;" name="submit" class="btnRefresh cancel"><i class="fa fa-refresh"></i></button>
+                                       </div>
+                                   </div>
+                                 </div>
+                                 <div class="row">
+                                 
+									<div class="col-md-12">
+                                    <input id="reset" type="reset" class="button left radius_2 secondary" value="Reset">
+										<button id="contactbutton" style="margin-right: 17px;" type="submit" onClick="sendContact2();" class="btn btn-primary btn-lg mb-xlg" >Send Message</button> <a href="tel:9085470770"  class="btn btn-tertiary btn-lg mb-xlg">or <strong>Call 908.547.0770</strong></a>
+									</div>
+								</div>
+                               
+							
+     
+                                            </div>
+								
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+       
+	    $(document).ready(function () {
+           
+            $("#reset").click(function () {
+               $('#name').val(''); $('#email').val(''); $('#phone').val(''); $('#contacttime').val(''); $('#comments').val('');
+  
+	
+            });
+        });
+
+         </script>
+         
+         <!-- Captcha Rferesh -->
+  
+  
+   <!-- Contact Validation -->
+<script>
+function validateContact2() {
+    var valid = true;	
+    $(".demoInputBox").css('background-color','');
+    $(".info").html('');
+	
+	if(!$("#name").val()) {
+        $("#name-info").html("Error: Please enter your first name.");
+        $("#name").css('background-color','#FFFFDF');
+        valid = false;
+    }
+	
+	if(!$("#lname").val()) {
+        $("#name-info2").html("Error: Please enter your last name.");
+        $("#lname").css('background-color','#FFFFDF');
+        valid = false;
+    }
+	
+	if(!$("#email").val()) {
+        $("#email-info3").html("Error: Please enter your email.");
+        $("#email").css('background-color','#FFFFDF');
+        valid = false;
+    }
+	
+	if(!$("#phone").val()) {
+        $("#phone-info").html("Error: Please enter phone no.");
+        $("#phone").css('background-color','#FFFFDF');
+        valid = false;
+    }
+    
+   if(!$("#email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+        $("#email-info").html("Error: Email address does not appear to be in a valid format.");
+        $("#email").css('background-color','#FFFFDF');
+        valid = false;
+    }
+	
+	if(!$("#email").val() && !$("#phone").val() ) {
+        $("#email-or-phone-info").html("Error: You must enter a Email Address and a Phone Number for us to be able to contact you.");
+        $("#email-or-phone").css('background-color','#FFFFDF');
+        valid = false;
+    }
+	 
+
+    
+    return valid;
+}
+</script>
+  
+  
+  
+  <!-- CONTACT Email Sending -->
+<script>
+function sendContact2() {
+	 var valid;	
+    valid = validateContact2();
+    if(valid) {
+        jQuery.ajax({
+            url: "php/contact-form.php",
+            data:'name='+$("#name").val() +'&lname='+$('#lname').val() +'&email='+$('#email').val() +'&phone='+$('#phone').val() +'&website='+$('#website').val() +'&comments='+$('#comments').val() +'&captcha='+$('#captcha').val(),
+            type: "POST",
+            success:function(data){
+                $("#mail-status2").html(data);
+			
+				
+            },
+            error:function (){}
+        });
+    }
+}
+</script>
+
+       
+
+
+
+
+</body>
+
+</html>

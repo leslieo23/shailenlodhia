@@ -1,206 +1,208 @@
 body,html{
-	height:100%;
+     height:100%;
 }
-
-body{
-	padding-top:50px;
-	position:relative;
-  background-color:#f4f4f4;
+ body{
+     padding-top:50px;
+     position:relative;
+     background-color:#f4f4f4;
 }
-
-.row{
-	margin:30px;
-	background-color:#f4f4f4;
-
+ .row{
+     margin:30px;
+     background-color:#f4f4f4;
 }
-
-p a:hover{
-  color:black;
-  text-decoration:none;
+ p a:hover{
+     color:black;
+     text-decoration:none;
 }
-
-p a:link{
-  color:black;
-  text-decoration:none;
+ p a:link{
+     color:black;
+     text-decoration:none;
 }
-a:hover{
-  color:black;
+ a:hover{
+     color:black;
 }
-	
-
-a:link{
-  color:black;
-  text-decoration:none;
+ a:link{
+     color:black;
+     text-decoration:none;
 }
-.title{
-    color:#fff;
-  font-weight:800;
-  font-size:20pt;
-  padding:25px;
-  text-align:center;
- /* margin-top:100px;*/
+ .title{
+     color:#fff;
+     font-weight:800;
+     font-size:20pt;
+     padding:25px;
+     text-align:center;
+    /* margin-top:100px;
+    */
 }
-
-.wide {
-  width:100%;
-  height:80%;
- height:calc(60% - 1px);
-  background-image:url('ShailenLogo@3x.png');
-  /*background-attachment: fixed;*/
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+ .wide {
+     width:100%;
+     height:80%;
+     height:calc(60% - 1px);
+     background-image:url('ShailenLogo@3x.png');
+    /*background-attachment: fixed;
+    */
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
 }
-.aboutME{
-  margin-top:-100px;
+ .aboutME{
+     margin-top:-100px;
 }
-.wide img{
-	width:100%;
+ .wide img{
+     width:100%;
 }
-
-.Seo1{
-  /*margin-top:-80px;*/
+ .Seo1{
+    /*margin-top:-80px;
+    */
 }
-.expreseo{
-  height:100%;
-  /*height:10%;*/
-  height:calc(60% - 1px);
-  background-image:url('ExpreseoLogo@3x.png');
-  /*background-attachment: fixed;*/
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; 
-  /*margin-top:-200px;*/
+ .expreseo{
+     height:100%;
+    /*height:10%;
+    */
+     height:calc(60% - 1px);
+     background-image:url('ExpreseoLogo@3x.png');
+    /*background-attachment: fixed;
+    */
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+    /*margin-top:-200px;
+    */
 }
-.Expreseo1{
-  margin-top:-120px;
+ .Expreseo1{
+     margin-top:-120px;
 }
-.SEO{
-    width:100%;
-  /*height:10%;*/
-  height:calc(60% - 1px);
-  background-image:url('SEO_Logo_2.jpg');
- background-repeat: no-repeat;
- /*background-size: cover;/*
-  /*background-attachment: fixed;*/
-  background-position: center;
-  margin-top:10px;
-  
+ .SEO{
+     width:100%;
+    /*height:10%;
+    */
+     height:calc(60% - 1px);
+     background-image:url('SEO_Logo_2.jpg');
+     background-repeat: no-repeat;
+    /*background-size: cover;
+    /* 
+    /*background-attachment: fixed;
+    */
+     background-position: center;
+     margin-top:10px;
 }
 /*.expreseo_logo{
-
-	display:block;
-	margin:0 auto;
-
-}*/
-.expreseo1{
-  align:center;
-  margin-top:60px;
+     display:block;
+     margin:0 auto;
 }
-.logo {
-  color:#fff;
-  font-weight:800;
-  font-size:14pt;
-  padding:25px;
-  text-align:center;
-  /*border-style:solid;
-  border-width:.5px;*/
-  margin-top:100px;
+*/
+ .expreseo1{
+     align:center;
+     margin-top:60px;
 }
-
-.Contact{
-  width:100%;
-  height:75%;
-  height:calc(60% - 1px);
-  background-image:url('background1.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; 
+ .logo {
+     color:#fff;
+     font-weight:800;
+     font-size:14pt;
+     padding:25px;
+     text-align:center;
+    /*border-style:solid;
+     border-width:.5px;
+    */
+     margin-top:100px;
 }
-
-.mail{
-  width:60px;
-  height:60px;
-  margin-top:15px;
+ .Contact{
+     width:100%;
+     height:75%;
+     height:calc(60% - 1px);
+     background-image:url('background1.jpg');
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
 }
-
-.contacts{
-   display:table;
-  text-align:center;
-  margin-left:auto;
-  margin-right:auto;
+ .mail{
+     width:60px;
+     height:60px;
+     margin-top:15px;
 }
-
-
-#mc_embed_signup{
-  background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-
-.linkedin{
-  width:80px;
-  height:60px;
+ .contacts{
+     display:table;
+     text-align:center;
+     margin-left:auto;
+     margin-right:auto;
 }
-
-h6{
-  margin-left:450px;
-  opacity:0.05;
-  font-size:10px;
+ #mc_embed_signup{
+     background:#fff;
+     clear:left;
+     font:14px Helvetica,Arial,sans-serif;
 }
-#myBtn{
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: #d8d8d8; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
+ .linkedin{
+     width:80px;
+     height:60px;
 }
-#myBtn:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
+ h6{
+     margin-left:450px;
+     opacity:0.05;
+     font-size:10px;
 }
-.article{
-text-align: center;    
-display: table-cell;
-vertical-align: middle;
+ #myBtn{
+     display: none;
+    /* Hidden by default */
+     position: fixed;
+    /* Fixed/sticky position */
+     bottom: 20px;
+    /* Place the button at the bottom of the page */
+     right: 30px;
+    /* Place the button 30px from the right */
+     z-index: 99;
+    /* Make sure it does not overlap */
+     border: none;
+    /* Remove borders */
+     outline: none;
+    /* Remove outline */
+     background-color: #d8d8d8;
+    /* Set a background color */
+     color: white;
+    /* Text color */
+     cursor: pointer;
+    /* Add a mouse pointer on hover */
+     padding: 15px;
+    /* Some padding */
+     border-radius: 10px;
+    /* Rounded corners */
 }
-
-.SeoLink{
-  text-decoration: none;
-  color:black;
-  font-size:8px;
-
+ #myBtn:hover {
+     background-color: #555;
+    /* Add a dark-grey background on hover */
 }
-
-
-
-footer{
-  display:table;
-  text-align:center;
-  margin-left:auto;
-  margin-right:auto;
+ .article{
+     text-align: center;
+     display: table-cell;
+     vertical-align: middle;
 }
-@media only screen and (min-width:768px){
-  h1{
-    margin-left:0px;
-    margin-top:100px;
-  }
-  .expreseo_logo{
-    margin-left:400px;
-  }
-
+ .SeoLink{
+     text-decoration: none;
+     color:black;
+     font-size:8px;
 }
-.rowcontact{
-  height:100px;
-
-/*.nav-link{
-  color:#0D0001;*/
+ footer{
+     display:table;
+     text-align:center;
+     margin-left:auto;
+     margin-right:auto;
 }
-
-.line{
-  margin-bottom:-100px;
+ @media only screen and (min-width:768px){
+     h1{
+         margin-left:0px;
+         margin-top:100px;
+    }
+     .expreseo_logo{
+         margin-left:400px;
+    }
 }
+ .rowcontact{
+     height:100px;
+    /*.nav-link{
+         color:#0D0001;
+        */
+    }
+     .line{
+         margin-bottom:-100px;
+    }
+    
