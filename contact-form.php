@@ -27,7 +27,7 @@ $enablePHPMailer = false;
     $website = strip_tags(trim($_POST["website"]));
   //  $interest = strip_tags(trim($_POST["interest"]));
 	$comments = strip_tags(trim($_POST["comments"]));
-	$captcha = strip_tags(trim($_POST["captcha"]));
+
 	
 	
 	
@@ -38,7 +38,7 @@ $enablePHPMailer = false;
     $finalwebsite = htmlspecialchars($website, ENT_QUOTES, 'UTF-8');
   //  $finalinterest = htmlspecialchars($interest, ENT_QUOTES, 'UTF-8');
 	$finalcomments = htmlspecialchars($comments, ENT_QUOTES, 'UTF-8');
-	$finalcaptcha = htmlspecialchars($captcha, ENT_QUOTES, 'UTF-8');
+
 	
 	$fields = array(
 		0 => array(
@@ -64,11 +64,8 @@ $enablePHPMailer = false;
 	    5 => array(
 			'text' => 'Comments',
 			'val' => $_POST['comments']
-		),
-		6 => array(
-			'text' => 'Captcha',
-			'val' => $_POST['captcha']
 		)
+		
 	);
 
 	$message = "";
@@ -206,7 +203,7 @@ $enablePHPMailer = false;
 			 print "<p class='enquirysuccess'>Success! We have received your Enquiry.</p>";
 			 $showcaptchastatus1 = 'contact_captchaError';
 	         echo "<script type=\"text/javascript\">document.getElementById('".$showcaptchastatus1."').style.display = 'none';</script>";
-             echo "<script type=\"text/javascript\">$(document).ready(function(){ $('#name').val(''); $('#lname').val(''); $('#email').val(''); $('#phone').val(''); $('#website').val(''); $('#comments').val(''); $('#captcha').val('');});</script>";
+             echo "<script type=\"text/javascript\">$(document).ready(function(){ $('#name').val(''); $('#lname').val(''); $('#email').val(''); $('#phone').val(''); $('#website').val(''); $('#comments').val(''); });</script>";
 			 echo "<script>setTimeout(function() { $('#mail-status2').fadeOut('fast');}, 9000); // <-- time in milliseconds </script>";
 		      } 
 	         else {
@@ -217,10 +214,6 @@ $enablePHPMailer = false;
       
 	 }
 	   
-   else {
-      $showcaptchastatus2 = 'contact_captchaError';
-	  echo "<script type=\"text/javascript\">document.getElementById('".$showcaptchastatus2."').style.display = 'block';</script>";
-     
-}
-
-?>
+  // else {
+    //  $showcaptchastatus2 = 'contact_captchaError';
+	  //echo "<script type=\"text/javascript\">document.getElementById('".$showcaptchastatus2."').style.display = 'block';</script>";
