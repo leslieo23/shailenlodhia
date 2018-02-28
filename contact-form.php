@@ -201,8 +201,8 @@ $enablePHPMailer = false;
 			 echo "<script type=\"text/javascript\">document.getElementById('".$showemailsent2."').style.display = 'block';</script>";
 			
 			 print "<p class='enquirysuccess'>Success! We have received your Enquiry.</p>";
-			 $showcaptchastatus1 = 'contact_captchaError';
-	         echo "<script type=\"text/javascript\">document.getElementById('".$showcaptchastatus1."').style.display = 'none';</script>";
+			// $showcaptchastatus1 = 'contact_captchaError';
+	        // echo "<script type=\"text/javascript\">document.getElementById('".$showcaptchastatus1."').style.display = 'none';</script>";
              echo "<script type=\"text/javascript\">$(document).ready(function(){ $('#name').val(''); $('#lname').val(''); $('#email').val(''); $('#phone').val(''); $('#website').val(''); $('#comments').val(''); });</script>";
 			 echo "<script>setTimeout(function() { $('#mail-status2').fadeOut('fast');}, 9000); // <-- time in milliseconds </script>";
 		      } 
