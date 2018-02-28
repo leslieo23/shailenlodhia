@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="" <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+ <script scr=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
 
 </head>
@@ -309,9 +309,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-    $('body').scrollspy({
-        target: '.nav'
-    })
+    //$('body').scrollspy({
+    //    target: '.nav'
+   // })
 
    // window.onscroll = function() {
     //    scrollFunction()
@@ -333,21 +333,6 @@
 </script>
 
 
-
-<script type="text/javascript">
-       
-        $(document).ready(function () {
-           
-            $("#reset").click(function () {
-               $('#name').val(''); $('#email').val(''); $('#phone').val(''); $('#contacttime').val(''); $('#comments').val('');
-  
-    
-            });
-        });
-
-         </script>
-         
-         <!-- Captcha Rferesh -->
   
   
    <!-- Contact Validation -->
@@ -408,8 +393,8 @@ function sendContact2() {
     valid = validateContact2();
     if(valid) {
         jQuery.ajax({
-            url: "php/contact-form.php",
-            data:'name='+$("#name").val() +'&lname='+$('#lname').val() +'&email='+$('#email').val() +'&phone='+$('#phone').val() +'&website='+$('#website').val() +'&comments='+$('#comments').val() +'&captcha='+$('#captcha').val(),
+            url: "contact-form.php",
+            data:'name='+$("#name").val() +'&lname='+$('#lname').val() +'&email='+$('#email').val() +'&phone='+$('#phone').val() +'&website='+$('#website').val() +'&comments='+$('#comments').val(),
             type: "POST",
             success:function(data){
                 $("#mail-status2").html(data);
