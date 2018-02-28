@@ -6,9 +6,15 @@ body,html{
      position:relative;
      background-color:#f4f4f4;
 }
+.jumbotron{
+    background-image:url('SEO_Logo_2.jpg');
+    background-size: cover;
+}
+
  .row{
      margin:30px;
      background-color:#f4f4f4;
+}
 }
  p a:hover{
      color:black;
